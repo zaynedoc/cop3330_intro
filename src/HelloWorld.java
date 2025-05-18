@@ -1,6 +1,6 @@
 import java.util.Scanner;   // "Scanner" is the class of the import
 
-public class helloWorld {
+public class HelloWorld {
     public static void main(String[] args){
         //System.out.print("Hello world!\n");
         System.out.println("Hello world!");     // ln -> "line new," an embedded \n
