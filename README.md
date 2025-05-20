@@ -1,7 +1,8 @@
-## Object-Oriented Programming (COP 3330)
+# Object-Oriented Programming (COP 3330)
 
-GitHub repository to document my Java-learning journey:
+GitHub repository to document my Java-learning journey
 
+## Classes & Packages
 ```src/helloWorld.java```: my first .java file to test the waters w/ Java syntax<br>
 ```src/DoorRoulette.java```: a quick game I made in two hours utilizing the Random utility import<br>
 ```src/MethodArr.java```: learned how to set up methods and 2D arrays<br>
@@ -9,3 +10,13 @@ GitHub repository to document my Java-learning journey:
 ```src/inheritance```: package utilizing inheritance, method overriding, and abstraction<br>
 
 My preferred IDE for Java is Intellij IDEA, and ocassioanlly Eclipse
+
+## How to Compile & Run
+1. Change directory to ```src``` (assuming new files were made in the src folder);
+- run ```cd src``` in terminal
+2. Compile entire package (a folder of classes) of which the new file/package was changed since last compilation;
+- run ```[packagename]/*.java```
+- example: ```inheritance/*java``` compiles are .java classes in the inheritance package
+3. Run the Main class from ```src``` directory;
+- run ```[packagename].[Mainclassname]```
+- example: ```inheritance.Main``` (name of Main class is subject to however it was named by the writer)
