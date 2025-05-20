@@ -15,8 +15,8 @@ My preferred IDE for Java is Intellij IDEA, and ocassioanlly Eclipse
 1. Change directory to ```src``` (assuming new files were made in the src folder);
 - run ```cd src``` in terminal
 2. Compile entire package (a folder of classes) of which the new file/package was changed since last compilation;
-- run ```[packagename]/*.java```
-- example: ```inheritance/*java``` compiles are .java classes in the inheritance package
+- run ```[packagename]/*.java``` in terminal
+- example: ```inheritance/*.java``` compiles all .java classes in the inheritance package
 3. Run the Main class from ```src``` directory;
-- run ```[packagename].[Mainclassname]```
-- example: ```inheritance.Main``` (name of Main class is subject to however it was named by the writer)
+- run ```[packagename].[Mainclassname]``` in terminal
+- example: ```inheritance.Main``` (name of Main class is subject to however it was named by the developer)
