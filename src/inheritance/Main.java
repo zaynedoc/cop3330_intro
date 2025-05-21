@@ -12,10 +12,10 @@ public class Main {
                      /\
                     /  \
                    /    \
-                  /      Vehicle (Parent)
-                 /                |  - int year;
-                /                 |  - String engineType;
-        VehicleType              /\
+                  /      Vehicle (Parent)   <--------------------------------------------- Dealership
+                 /                |  - int year;                                              - int carCount;
+                /                 |  - String engine;   <-- String engine.type; Composition   - String name;
+        VehicleType              /\                                                           - Vehicle[] cars; Aggregation
           - String category;    /  \
                                /    \
                               |   Sedans (Child)

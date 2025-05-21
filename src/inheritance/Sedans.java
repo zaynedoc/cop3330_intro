@@ -4,8 +4,8 @@ public class Sedans extends Make {
     static int doors = 4;
     String model;
 
-    Sedans(String model, String brand, int year, String engineType) {
-        super(brand, year, engineType);
+    Sedans(String model, String brand, int year, String type) {
+        super(brand, year, type);
         this.model = model;
     }
 
@@ -15,6 +15,6 @@ public class Sedans extends Make {
 
     @Override
     void displayInfo() {
-        System.out.println("Coupe: " + year + " " + brand + " " + model + " with a " + engineType + " engine");
+        System.out.println("Coupe: " + year + " " + brand + " " + model + " with a " + engine.type + " engine");
     }
 }

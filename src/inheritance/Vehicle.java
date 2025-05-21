@@ -2,11 +2,11 @@ package inheritance;
 
 public abstract class Vehicle {
     int year;
-    String engineType;
+    Engine engine;
 
-    Vehicle(int year, String engineType) {
+    Vehicle(int year, String engine) {
         this.year = year;
-        this.engineType = engineType;
+        this.engine = new Engine(engine);
     }
 
     // Abstraction: the process of hiding implementation details by showing essential features
