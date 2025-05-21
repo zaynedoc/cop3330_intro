@@ -7,7 +7,7 @@ GitHub repository to document my Java-learning journey
 ```src/DoorRoulette.java```: a quick game I made in two hours utilizing the Random utility import<br>
 ```src/MethodArr.java```: learned how to set up methods and 2D arrays<br>
 ```src/oriented```: my first package; demonstrates object oriented programming by using classes<br>
-```src/inheritance```: package utilizing inheritance, method overriding, and abstraction<br>
+```src/inheritance```: package utilizing inheritance, method overriding, polymorphism, and abstraction<br>
 
 My preferred IDE for Java is Intellij IDEA, and ocassioanlly Eclipse
 
@@ -20,3 +20,6 @@ My preferred IDE for Java is Intellij IDEA, and ocassioanlly Eclipse
 3. Run the Main class from ```src``` directory;
 - run ```[packagename].[Mainclassname]``` in terminal
 - example: ```inheritance.Main``` (name of Main class is subject to however it was named by the developer)
+
+I mainly follow this video to learn Java/Object-Oriented Programming:<br>
+https://youtu.be/xTtL8E4LzTQ (though, all code in this repo was ideated by me)

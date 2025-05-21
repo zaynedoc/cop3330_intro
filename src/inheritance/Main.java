@@ -54,6 +54,14 @@ public class Main {
             vehicle.displayInfo();
         }
 
+        // Aggregation: two separate classes of objects can still exist
+        //              as separate objects, but also connected
+        // Example: cars and dealerships
+
+        Dealership Hyundai = new Dealership(vehicles.length, "Hyundai", vehicles);
+        System.out.println();
+        Hyundai.printCars();
+
         Make userCar;
         // Runtime polymorphism: an object is defined during
         //                       the program's runtime
