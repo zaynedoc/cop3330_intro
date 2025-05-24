@@ -3,9 +3,40 @@ import java.util.Objects;
 import java.util.Scanner;
 
 public class Main {
-    public void enterDevice(String choice, SmartDevice[] devices, Room[] rooms) {
+    public static void enterDevice(String choice, SmartDevice[][] devices, Room[] rooms, int i, Scanner stdin) {
+        System.out.println("\nIn '" + rooms[i].name + "':");
+        System.out.println("Provide a name for new " + choice + ": ");
+        String name = stdin.nextLine();
 
-    }   // placeholder function rn, meant for entering devices to prevent repeated code
+        System.out.println("Provide manufacturer name for " + name);
+        String brand = stdin.nextLine();
+
+        if (choice.equals("SmartSpeaker")) {
+            System.out.println("Set volume (0-100): ");
+            int val = stdin.nextInt();
+            stdin.nextLine();
+
+            SmartDevice device = new SmartSpeaker(val, brand, name);
+            rooms[i].addDevice(devices[i], device);
+        } else if (choice.equals("SmartLight")) {
+            System.out.println("Set brightness (0-100): ");
+            int val = stdin.nextInt();
+            stdin.nextLine();
+
+            SmartDevice device = new SmartLight(val, brand, name);
+            rooms[i].addDevice(devices[i], device);
+        } else if (choice.equals("SmartThermostat")) {
+            System.out.println("Set temperature (°F): ");
+            int val = stdin.nextInt();
+            stdin.nextLine();
+
+            SmartDevice device = new SmartThermostat(val, brand, name);
+            rooms[i].addDevice(devices[i], device);
+        }
+
+        System.out.println("\nDevices in '" + rooms[i].name + "':");
+        rooms[i].deviceStatuses(devices[i]);
+    }   // Meant for entering devices to prevent repeated code
 
     public static void main (String [] args) {
         Scanner stdin = new Scanner(System.in);
@@ -40,27 +71,36 @@ public class Main {
 
                 if (devices[i][19] != null) {   // if final device in array is NOT null, or has info
                     System.out.println("Exceeded device limit for " + rooms[i].name + "\n");
-                    loopEnd = "End";    // Prevent user from adding anymore devices to array
+                    loopEnd = "End"; // Prevent user from adding anymore devices to array
                 } else if (choice.equals("SmartSpeaker")){
+                    enterDevice(choice, devices, rooms, i, stdin);
+
+                    /*
                     System.out.println("\nIn '" + rooms[i].name + "':");
-                    System.out.println("Provide a name for new SmartSpeaker: ");
+                    System.out.println("Provide a name for new + " + choice + ": ");
                     String name = stdin.nextLine();
 
                     System.out.println("Provide manufacturer name for " + name);
                     String brand = stdin.nextLine();
 
-                    System.out.println("Set volume (0-100): ");
-                    int val = stdin.nextInt();
-                    stdin.nextLine();
+                    if (choice.equals("SmartSpeaker")) {
+                        System.out.println("Set volume (0-100): ");
+                        int val = stdin.nextInt();
+                        stdin.nextLine();
 
-                    SmartDevice device = new SmartSpeaker(val, brand, name);
+                        SmartDevice device = new SmartSpeaker(val, brand, name);
+                        rooms[i].addDevice(devices[i], device);
+                    }
 
-                    rooms[i].addDevice(devices[i], device);
                     System.out.println("\nDevices in '" + rooms[i].name + "':");
                     rooms[i].deviceStatuses(devices[i]);
+                    */ // Older code, before enterDevice implementation; just for show
                 } else if (choice.equals("SmartLight")) {
+                    enterDevice(choice, devices, rooms, i, stdin);
+
+                    /*
                     System.out.println("\nIn '" + rooms[i].name + "':");
-                    System.out.println("Provide a name for new SmartLight: ");
+                    System.out.println("Provide a name for new + " + choice + ": ");
                     String name = stdin.nextLine();
 
                     System.out.println("Provide manufacturer name for " + name);
@@ -71,13 +111,18 @@ public class Main {
                     stdin.nextLine();
 
                     SmartDevice device = new SmartLight(val, brand, name);
-
                     rooms[i].addDevice(devices[i], device);
+
                     System.out.println("\nDevices in '" + rooms[i].name + "':");
                     rooms[i].deviceStatuses(devices[i]);
+                    */
                 } else if (choice.equals("SmartThermostat") && isThermostat == false){
+                    enterDevice(choice, devices, rooms, i, stdin);
+                    isThermostat = true;
+
+                    /*
                     System.out.println("\nIn '" + rooms[i].name + "':");
-                    System.out.println("Provide a name for new SmartThermostat: ");
+                    System.out.println("Provide a name for new + " + choice + ": ");
                     String name = stdin.nextLine();
 
                     System.out.println("Provide manufacturer name for " + name);
@@ -88,11 +133,12 @@ public class Main {
                     stdin.nextLine();
 
                     SmartDevice device = new SmartThermostat(val, brand, name);
-
                     rooms[i].addDevice(devices[i], device);
+                    isThermostat = true;
+
                     System.out.println("\nDevices in '" + rooms[i].name + "':");
                     rooms[i].deviceStatuses(devices[i]);
-                    isThermostat = true;
+                    */
                 } else if (choice.equals("SmartThermostat") && isThermostat == true){
                     System.out.println("\nThermostat already in current room");
                 } else if (choice.equals("End")) {
@@ -103,7 +149,8 @@ public class Main {
             }
         }
 
-
+        System.out.println("\nYour SmartHome:");
+        home.printRoomNames();
 
         /*
                         SmartHome home; -> String name;
