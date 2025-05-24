@@ -23,14 +23,18 @@ public class Room {
     // Go through array of devices in room; toggle each on
     public void toggleOnAll(SmartDevice[] devices) {
         for (SmartDevice device : devices) {
-            device.toggleOn();
+            if (device != null) { // in Main, device array initializes devices as null
+                device.toggleOn();
+            }
         }
     }
 
     // Go through array of devices in room; toggle each off
     public void toggleOffAll(SmartDevice[] devices) {
         for (SmartDevice device : devices) {
-            device.toggleOff();
+            if (device != null) { // in Main, device array initializes devices as null
+                device.toggleOff();
+            }
         }
     }
 
