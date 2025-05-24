@@ -8,7 +8,7 @@ GitHub repository to document my Java-learning journey
 ```src/MethodArr.java```: learned how to set up methods and 2D arrays<br>
 ```src/oriented```: my first package; demonstrates object oriented programming by using classes<br>
 ```src/inheritance```: package utilizing inheritance, method overriding, polymorphism, and abstraction<br>
-```src/smarthome```: package utilizing inheritance, absrtaction, and (soon) file I/O<br>
+```src/smarthome```: package utilizing inheritance, absrtaction, 2D arrays, and (soon) file I/O<br>
 
 My preferred IDE for Java is Intellij IDEA, and ocassioanlly Eclipse
 
