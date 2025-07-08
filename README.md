@@ -10,6 +10,7 @@ GitHub repository to document my Java-learning journey
 ```src/inheritance```: package utilizing inheritance, method overriding, polymorphism, and abstraction<br>
 ```src/smarthome```: package utilizing inheritance, absrtaction, 2D arrays, and (soon) file I/O<br>
 ```src/file_io```: package that practices file I/O (input/output)<br>
+```src/jframe```: package that practices GUI using JFrame import<br>
 
 My preferred IDE for Java is Intellij IDEA, and ocassioanlly Eclipse
 
